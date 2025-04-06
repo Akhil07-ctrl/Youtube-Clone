@@ -131,19 +131,19 @@ class App extends Component {
             addVideoReaction: this.addVideoReaction,
           }}
         >
-          <Router basename='/Nxt-Watch/'>
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route element={<ProtectedRoute />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/trending" element={<Trending />} />
-              <Route path="/gaming" element={<Gaming />} />
-              <Route path="/saved-videos" element={<SavedVideos />} />
-              <Route path="/videos/:id" element={<Video />} />
-            </Route>
-            <Route path="/not-found" element={<NotFound />} />
-            <Route path="*" element={<Navigate to="/not-found" replace />} />
-          </Routes>
+          <Router basename='/Youtube-Clone/'>
+            <Routes>
+              <Route path="/login" element={<Login />} />
+              <Route element={<ProtectedRoute />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/trending" element={<Trending />} />
+                <Route path="/gaming" element={<Gaming />} />
+                <Route path="/saved-videos" element={<SavedVideos />} />
+                <Route path="/videos/:id" element={<Video />} />
+              </Route>
+              <Route path="/not-found" element={<NotFound />} />
+              <Route path="*" element={<Navigate to="/not-found" replace />} />
+            </Routes>
           </Router>
         </NxtWatchContext.Provider>
       </>
